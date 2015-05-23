@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/**
+ * @version      $Id$
+ * @package      Google Map API3 - Improved
+ * @subpackage   mod_google_map_v3_improved
+ * @copyright    Copyright (C) 2009-2012 Noxidsoft. All rights reserved.
+ * @license      GNU General Public License <http://www.gnu.org/copyleft/gpl.html>
+ * @author       Noel Dixon <noel.dixon@noxidsoft.com>
+ */
+-->
+<install type="module" version="1.5.0">
+    <!-- Name of the Module -->
+        <name>Google Maps API3 - Improved</name> 
+ 
+    <!-- Name of the Author -->
+        <author>Noxidsoft - Noel Dixon</author> 
+ 
+    <!-- Version Date of the Module -->
+        <creationDate>15 March 2010</creationDate> 
+ 
+    <!-- Copyright information -->
+        <copyright>(c) 2009-2011. Noxidsoft. All rights reserved.</copyright> 
+ 
+    <!-- License Information -->
+        <license>GPL 2.0</license> 
+ 
+    <!-- Author's email address -->
+        <authorEmail>noel.dixon@noxidsoft.com</authorEmail> 
+ 
+    <!-- Author's website -->
+        <authorUrl>http://www.noxidsoft.com</authorUrl> 
+ 
+    <!-- Module version number -->
+        <version>2.6.1</version> 
+ 
+    <!-- Description of what the module does -->
+        <description>A Joomla 1.5 Module to render Google Maps with the new Version 3 API.</description>
+ 
+    <!-- Listing of all files that should be installed for the module to function -->
+    <files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+        <filename module="mod_google_map_v3_improved">mod_google_map_v3_improved.php</filename>
+        <filename>params.ini</filename>
+        <filename>index.html</filename>
+        <filename>css/index.html</filename>
+        <filename>css/template.css</filename>
+				<filename>js/index.html</filename>
+				<filename>js/geocoder.js</filename>
+				<filename>images/index.html</filename>
+				<filename>images/yellow.png</filename>
+				<filename>images/blue.png</filename>
+				<filename>images/green.png</filename>
+				<filename>images/black.png</filename>
+				<filename>images/home.png</filename>
+				<filename>images/university.png</filename>
+				<filename>images/school.png</filename>
+				<filename>images/parking.png</filename>
+				<filename>images/info.png</filename>
+				<filename>images/conference.png</filename>
+				<filename>images/church.png</filename>
+				<filename>images/bookstore.png</filename>
+    </files>
+ 
+    <!-- Optional parameters -->
+    <params>
+     	<param name="address" type="text" default="Toowoomba, QLD" label="Building Address" description="Enter the Building Address you wish to have a marker point to! Examples: Toowoomba, QLD or 9 Rama Ct, Toowoomba or 9 Rama Ct, Toowoomba Qld 4350 and other variations work ok!" size="50" />
+     	<param name="height" type="text" default="480" label="Map Height (pixels)" description="Enter the virtical map size required!" size="5" />
+     	<param name="width" type="text" default="320" label="Map Width (pixels)" description="Enter the horizontal map size required!" size="5" />
+     	<param name="zoom" type="list" default="12" label="Zoom Level" description="Select the ZOOM level desired!">
+				<option value="0">0 - World View</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3 - Country View 1</option>
+				<option value="4">4 - Country View 2</option>
+				<option value="5">5 - State View</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8 - Region</option>
+				<option value="9">9</option>
+				<option value="10">10 - Immediate Region</option>
+				<option value="11">11</option>
+				<option value="12">12 - Suburb View</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15 - Nearby Streets</option>
+				<option value="16">16</option>
+				<option value="17">17 - Lot Numbers</option>
+				<option value="18">18</option>
+				<option value="19">19 - Max</option>
+			</param>
+			<param type="spacer" />
+			<param name="marker_icon" type="list" default="4" label="Marker Icon" description="Select the Icon Marker desired that points out the address position!">
+				<option value="0">Yellow Marker</option>
+				<option value="1">Green Marker</option>
+				<option value="2">Blue Marker</option>
+				<option value="3">Black Marker</option>
+				<option value="4">Home</option>
+				<option value="5">University</option>
+				<option value="6">School</option>
+				<option value="7">Parking</option>
+				<option value="8">Info</option>
+				<option value="9">Conference</option>
+				<option value="10">Church</option>
+				<option value="11">Bookstore</option>
+			</param>
+			<param type="spacer" />
+			<param name="toggle_search" type="radio" default="1" label="Toggle Search" description="Turns search on or off - End user can find a new location!">
+ 				<option value="0">Off</option>
+ 				<option value="1">On</option>
+			</param>
+			<param name="toggle_buttontext" type="text" default="Find" label="Search Button Text" description="Enter the text you want the search button to say! Examples: Find, Go, Search, Do it, I'm feeling lucky!" size="30" />
+			<param name="toggle_topbottom" type="radio" default="1" label="Toggle Top or Bottom" description="Render (Toggle Search) at the Top or Bottom of the map!">
+  				<option value="0">Top</option>
+  				<option value="1">Bottom</option>
+			</param>
+			<param name="toggle_leftmiddleright" type="radio" default="1" label="Toggle Left/Middle/Right" description="Render (Toggle Search) either at the left, middle or right according to map position!">
+ 				<option value="0">Left</option>
+ 				<option value="1">Middle</option>
+				<option value="2">Right</option>
+			</param>
+			<param type="spacer" />
+			<param name="toggle_mapcontrols" type="radio" default="1" label="Toggle Map Controls" description="Turns Map Controls on or off - Navigation, Scale, Map, Satellite, Hybrid, Terrain!">
+ 				<option value="0">Off</option>
+ 				<option value="1">On</option>
+			</param>
+      </params>
+		<params group="advanced">
+			<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		</params>
+</install>
